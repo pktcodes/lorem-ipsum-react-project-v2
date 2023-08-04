@@ -255,23 +255,26 @@ ul {
 /* ============= PROJECT CSS =============== */
 .section-center {
   width: 80vw;
-  max-width: 40rem;
   margin: 10rem auto;
+  max-width: var(--fixed-width);
 }
+
 .section-center h4 {
   text-transform: uppercase;
   text-align: center;
 }
+
 .lorem-form {
-  text-transform: capitalize;
-  letter-spacing: var(--letterSpacing);
   margin-top: 2rem;
   margin-bottom: 4rem;
+  text-transform: capitalize;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  letter-spacing: var(--letterSpacing);
 }
+
 .lorem-form label {
   font-size: 1.25rem;
 }
@@ -279,10 +282,10 @@ ul {
 .lorem-form input {
   padding: 0.25rem 0.5rem;
   width: 4rem;
+  font-size: 1.25rem;
   border-radius: var(--borderRadius);
   border-color: transparent;
-  background: var(--grey-300);
-  font-size: 1.25rem;
+  background-color: var(--grey-300);
 }
 
 .lorem-form .btn {
