@@ -6,12 +6,19 @@ const App = () => {
   const [count, setCount] = useState(1);
   const [text, setText] = useState([]);
 
-  console.log(count);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Input Element sends string
+    const amount = parseInt(count);
+    const paragraphs = data.slice(0, amount);
+    setText(paragraphs);
+  };
 
   return (
     <section className="section-center">
       <h4>tired of boring lorem ipsum?</h4>
-      <form className="lorem-form">
+      <form className="lorem-form" onSubmit={handleSubmit}>
         <label htmlFor="amount">paragraphs:</label>
         <input
           type="number"
@@ -29,6 +36,11 @@ const App = () => {
           generate
         </button>
       </form>
+      <article className="lorem-text">
+        {text.map((paragraph) => {
+          return <p>{paragraph}</p>;
+        })}
+      </article>
     </section>
   );
 };
